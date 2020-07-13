@@ -1,13 +1,13 @@
-package com.cuvic.demo;
+package com.cuvic.cms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class CMSApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(CMSApplication.class, args);
     }
 
 }
