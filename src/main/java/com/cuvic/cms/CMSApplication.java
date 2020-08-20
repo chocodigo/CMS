@@ -6,11 +6,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import javax.sql.DataSource;
 
 @SpringBootApplication
 @MapperScan(basePackages={"com.cuvic.*"})
+@EnableScheduling
+
 public class CMSApplication {
 
     public static void main(String[] args) {
