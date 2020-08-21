@@ -1,4 +1,4 @@
-package com.cuvic.cms;
+package com.cuvic;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
