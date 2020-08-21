@@ -16,8 +16,8 @@ public class ItemController {
     private ItemMapper itemMapper;
 
     @RequestMapping("/item")
-    public ModelAndView item() throws Exception{
+    public ModelAndView item() throws Exception {
         List<ItemVO> item = itemMapper.itemList();
-        return new ModelAndView("item","list",item);
+        return new ModelAndView("item", "list", item);
     }
 }
