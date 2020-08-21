@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.cuvic.item.mapper.ItemMapper">
+
+    <insert id="itemInsert" parameterType="com.cuvic.item.domain.ItemVO">
+        insert into item
+            values
+        (#{ITEM_NUMB},#{CATE_NUMB},#{ITEM_MODE},#{ITEM_AMNT},#{ITEM_STAT},0)
+    </insert>
+
+    <select id="itemList" resultType="com.cuvic.item.domain.ItemVO">
+        select * from item
+    </select>
+
+</mapper>
