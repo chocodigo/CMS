@@ -12,7 +12,7 @@ public class UserVO {
     private String user_numb;   // 유저ID
     private String user_name;   // 유저이름
     private int user_grad;      // 유저학년
-    private Date user_birt;     // 유저생일
+    private Date user_birt;     // U유저생일
     private int user_stat;      // 유저상태
                                 // 0 : 자퇴
                                 // 1 : 재학
@@ -22,8 +22,8 @@ public class UserVO {
                                 // 0 : 안냄
                                 // 1 : 냄
     private String user_phon;   // 핸드폰 번호
-    private int user_flag;      // 기수
-    private String pass_word;   // 관리자만 설정 가능 나머지는 1111로 접근(열람권한 관리자에게만 있음)
+    private String user_flag;      // 기수
+    private String pass_word;   // 관리자만 설정
 
     public String getUser_numb() {
         return user_numb;
@@ -81,11 +81,11 @@ public class UserVO {
         this.user_phon = user_phon;
     }
 
-    public int getUser_flag() {
+    public String getUser_flag() {
         return user_flag;
     }
 
-    public void setUser_flag(int user_flag) {
+    public void setUser_flag(String user_flag) {
         this.user_flag = user_flag;
     }
 
