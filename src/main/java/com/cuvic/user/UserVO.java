@@ -13,7 +13,7 @@ public class UserVO {
     private String user_name;   // 유저이름
     private int user_grad;      // 유저학년
     private Date user_birt;     // U유저생일
-    private int user_stat;      // 유저상태
+    private String user_stat;      // 유저상태
                                 // 0 : 자퇴
                                 // 1 : 재학
                                 // 2 : 휴학
@@ -57,11 +57,11 @@ public class UserVO {
         this.user_birt = user_birt;
     }
 
-    public int getUser_stat() {
+    public String getUser_stat() {
         return user_stat;
     }
 
-    public void setUser_stat(int user_stat) {
+    public void setUser_stat(String user_stat) {
         this.user_stat = user_stat;
     }
 

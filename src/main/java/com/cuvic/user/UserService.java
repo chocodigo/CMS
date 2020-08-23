@@ -16,4 +16,9 @@ public class UserService {
     public List<UserVO> getUserListService() throws Exception{
         return userMapper.getUserList();
     }
+
+    // 회원 상태 받아오는 서비스
+    public List<UserStatVO> getUserStatListService() throws Exception{
+        return userMapper.getUserStatList();
+    }
 }

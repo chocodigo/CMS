@@ -13,7 +13,9 @@
         USER_NAME,      /*유저 이름*/
         USER_GRAD,      /*유저 학년*/
         USER_BIRT,      /*유저 생일*/
-        USER_STAT,      /*유저 상태
+        (SELECT STAT_NAME
+        FROM User_Stat
+        WHERE USER_STAT = STAT_NUMB) AS USER_STAT,      /*유저 상태
                                 // 0 : 자퇴
                                 // 1 : 재학
                                 // 2 : 휴학
@@ -25,6 +27,16 @@
         USER_FLAG,      /*기수*/
         PASS_WORD       /*비밀번호(관리자만 설정)*/
         FROM CuvicUser
+    </select>
+
+    <!--
+        회원 상태 리스트 받아오는 쿼리
+    -->
+    <select id="getUserStatList" resultType="com.cuvic.user.UserStatVO">
+        SELECT
+        STAT_NUMB,
+        STAT_NAME
+        FROM User_Stat
     </select>
 
 

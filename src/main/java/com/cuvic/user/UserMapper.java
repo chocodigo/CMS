@@ -11,4 +11,7 @@ public interface UserMapper {
     // 회원 리스트 받아오기
     public List<UserVO> getUserList() throws Exception;
 
+    // 회원 상태 받아오기
+    public List<UserStatVO> getUserStatList() throws Exception;
+
 }
