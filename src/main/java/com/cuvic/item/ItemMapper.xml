@@ -11,7 +11,7 @@
         (#{ITEM_NUMB},#{CATE_NUMB},#{ITEM_MODE},#{ITEM_AMNT},#{ITEM_STAT},0)
     </insert>
 
-    <select id="itemList" resultType="com.cuvic.item.ItemVO">
+    <select id="getItemList" resultType="com.cuvic.item.ItemVO">
         select * from item
     </select>
 
