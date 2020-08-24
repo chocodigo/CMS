@@ -1,4 +1,4 @@
-package com.cuvic.item.domain;
+package com.cuvic.item;
 
 public class ItemVO {
 
