@@ -10,6 +10,6 @@ public interface ItemMapper {
     //자재 카테고리 받아오기
     public List<ItemCategoryVO> getItemCategoryList()throws Exception;
 
-    //자재 추가하기
+    //자재 추가
     public int insertItemList(ItemVO itemVO)throws Exception;
 }

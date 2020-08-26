@@ -23,7 +23,7 @@ public class ItemService {
         return itemMapper.getItemCategoryList();
     }
 
-    //자재 리스트 추가하는 서비스
+    //자재 리스트 추가 서비스
     public int insertItemListService(ItemVO itemVO)throws Exception{
         return itemMapper.insertItemList(itemVO);
     }

@@ -54,6 +54,7 @@ public class ItemVO {
         this.ITEM_STAT = ITEM_STAT;
     }
 
+
     // 자재 카테고리명
     public String getCATE_NAME(){
         return CATE_NAME;

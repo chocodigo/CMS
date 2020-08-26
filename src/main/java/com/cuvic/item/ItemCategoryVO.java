@@ -14,6 +14,7 @@ public class ItemCategoryVO {
         this.CATE_NUMB = CATE_NUMB;
     }
 
+
     // 자재 카테고리명
     public String getCATE_NAME(){
         return CATE_NAME;

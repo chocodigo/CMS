@@ -36,6 +36,7 @@ public class ItemController {
         int ITEM_AMNT = Integer.parseInt(request.getParameter("ITEM_AMNT"));
         String ITEM_STAT = request.getParameter("ITEM_STAT");
 
+
         itemVO.setCATE_NUMB(CATE_NUMB);
         itemVO.setITEM_MODE(ITEM_MODE);
         itemVO.setITEM_AMNT(ITEM_AMNT);
