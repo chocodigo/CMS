@@ -9,7 +9,7 @@
         자재 리스트 받아오는 쿼리
     -->
     <select id="getItemList" resultType="com.cuvic.item.ItemVO">
-        SELECT CATE_NAME, ITEM_MODE, ITEM_AMNT, ITEM_STAT
+        SELECT ITEM_NUMB, CATE_NAME, ITEM_MODE, ITEM_AMNT, ITEM_STAT
         FROM item, item_category
         WHERE item.CATE_NUMB = item_category.CATE_NUMB
     </select>
@@ -29,4 +29,21 @@
         values(#{CATE_NUMB},#{ITEM_MODE},#{ITEM_AMNT},#{ITEM_STAT})
     </insert>
 
+    <!--
+        자재 리스트 삭제 쿼리
+    -->
+    <delete id="deleteItemList">
+        DELETE
+        FROM item
+        WHERE
+        ITEM_NUMB = #{ITEM_NUMB}
+    </delete>
+
+    <!--
+        카테고리 리스트 추가 쿼리
+    -->
+    <insert id="insertCategoryList" parameterType="com.cuvic.item.ItemCategoryVO">
+        insert into item_category(CATE_NAME)
+        values(#{CATE_NAME})
+    </insert>
 </mapper>

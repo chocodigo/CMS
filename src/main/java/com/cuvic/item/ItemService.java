@@ -27,4 +27,14 @@ public class ItemService {
     public int insertItemListService(ItemVO itemVO)throws Exception{
         return itemMapper.insertItemList(itemVO);
     }
+
+    //자재 리스트 삭제 서비스
+    public int deleteItemListService(int ITEM_NUMB)throws Exception{
+        return itemMapper.deleteItemList(ITEM_NUMB);
+    }
+
+    //카테고리 리스트 추가 서비스
+    public int insertCategoryListService(ItemCategoryVO itemCategoryVO)throws Exception{
+        return itemMapper.insertCategoryList(itemCategoryVO);
+    }
 }

@@ -9,7 +9,17 @@
     <title>아이템 페이지</title>
 </head>
 <body>
-        <table>
+        <table border="1">
+            <caption>카테고리 추가</caption>
+            <tr>
+                <form method="POST" action="/categoryInsertProc" method="post">
+                    <td><input type="text" name="CATE_NAME" style="width:60px"></td>
+                    <td><button type="submit" class="btn btn-default">추가</button></td>
+                </form>
+            </tr>
+        </table>
+        <table border="1">
+            <caption>자재 리스트</caption>
             <tr>
                 <th>카테고리</th>
                 <th>모델명</th>
@@ -23,7 +33,7 @@
                 <td>${item.ITEM_MODE}</td>
                 <td>${item.ITEM_AMNT}</td>
                 <td>${item.ITEM_STAT}</td>
-                <td><button type="submit" class="btn btn-default">삭제</button></td>
+                <td><button type="submit" class="btn btn-default" onclick="location.href='/itemDeleteProc/${item.ITEM_NUMB}'">삭제</button></td>
             </tr>
             </c:forEach>
             <tr>
