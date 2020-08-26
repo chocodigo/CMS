@@ -27,6 +27,19 @@
         USER_FLAG,      /*기수*/
         PASS_WORD       /*비밀번호(관리자만 설정)*/
         FROM CuvicUser
+        WHERE 1=1
+        <if test="search_grade != ''">        /*학년별 검색*/
+            AND #{search_grade} = USER_GRAD
+        </if>
+        <if test="search_stat != ''">        /*상태별 검색*/
+            AND #{search_stat} = USER_STAT
+        </if>
+        <if test="search_money != ''">        /*회비 입금 여부별 검색*/
+            AND #{search_money} = USER_MONE
+        </if>
+        <if test="search_flag != ''">        /*기수별 검색*/
+            AND #{search_flag} = USER_FLAG
+        </if>
     </select>
 
     <!--
@@ -40,4 +53,12 @@
     </select>
 
 
+    <!--
+        회원 기수 리스트 받아오는 쿼리
+    -->
+    <select id="getUserFlagList" resultType="int">
+        SELECT
+        FLAG_NUMB
+        FROM User_Flag
+    </select>
 </mapper>
