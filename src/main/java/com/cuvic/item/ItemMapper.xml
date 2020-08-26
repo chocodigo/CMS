@@ -5,14 +5,28 @@
 
 <mapper namespace="com.cuvic.item.ItemMapper">
 
-    <insert id="itemInsert" parameterType="com.cuvic.item.ItemVO">
-        insert into item
-            values
-        (#{ITEM_NUMB},#{CATE_NUMB},#{ITEM_MODE},#{ITEM_AMNT},#{ITEM_STAT},0)
-    </insert>
-
+    <!--
+        자재 리스트 받아오는 쿼리
+    -->
     <select id="getItemList" resultType="com.cuvic.item.ItemVO">
-        select * from item
+        SELECT CATE_NAME, ITEM_MODE, ITEM_AMNT, ITEM_STAT
+        FROM item, item_category
+        WHERE item.CATE_NUMB = item_category.CATE_NUMB
     </select>
+
+    <!--
+        자재 카테고리 리스트 받아오는 쿼리
+    -->
+    <select id="getItemCategoryList" resultType="com.cuvic.item.ItemVO">
+        select * from item_category
+    </select>
+
+    <!--
+        자재 리스트 추가하는 쿼리
+    -->
+    <insert id="insertItemList" parameterType="com.cuvic.item.ItemVO">
+        insert into item(CATE_NUMB, ITEM_MODE, ITEM_AMNT, ITEM_STAT)
+        values(#{CATE_NUMB},#{ITEM_MODE},#{ITEM_AMNT},#{ITEM_STAT})
+    </insert>
 
 </mapper>
